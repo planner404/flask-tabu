@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .card-group {
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-body {
+        border-style: none;
+        height: 520px;
+        width: 340px;
+        background-color: rgb(222, 220, 243);
+        border-radius: 60px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        filter: drop-shadow(rgb(64, 41, 110) 10px 10px 0px);
+    }
+    .card-header {
+        border-style: none;
+        border-radius: 60px 60px 0px 0px;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(255, 164, 94);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-word {
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .forbidden-words {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Adjust gap as needed */
+        margin-top: 20px;
+    }
+    .blackword-button {
+        font-weight: bold;
+        color: #db3761;
+        text-align: center;
+        font-size: 24px;
+        line-height: 36px;
+        width: 80%;
+        height: auto;
+        padding: 5px 10px;
+        background-color: #222f54;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .blackword-button:hover {
+        background: linear-gradient(to right, #4d234e, #222f54);
+        color: #ffffff;
+    }
+    .forbidden-button {
+        font-weight: bold;
+        color: rgb(34, 47, 84);
+        text-align: center;
+        font-size: 24px;
+        line-height: 36px;
+        width: 80%;
+        height: auto;
+        padding: 5px 10px;
+        /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+        /* background-color: rgb(0, 123, 255); Example button color */
+        background: transparent;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    .forbidden-button:hover{
+        cursor: default;
+        background: transparent;
+        color: rgb(34, 47, 84);
+    }
+    .answer-buttons {
+        display: flex;
+
+        justify-content: space-around;
+        margin-top: 20px;
+
+    }
+    .answer-button {
+        width: 100px;
+        height: 140px;
+        border-radius: 20px;
+        background-color: #007bff; /* Example button color */
+        border: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-family: 'Calibri';
+        font-weight: bold;
+        color: #dedcf3;
+    }
+
+    .pause-overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-style: none;
+      text-align: center;
+      background-color: rgb(0, 0, 0);
+      width: inherit;
+      height: inherit;
+      opacity: 0.66;
+      z-index: 5;
+    }
+
+    .pause-menu-button {
+        border-width: 0.33rem;
+        border-radius: 2rem;
+        padding: 1rem;
+        background-color: transparent;
+        margin: 1rem;
+    }
+</style>
+
+<div class="topbar-body white-text" style="color: rgb(34, 47, 84)">
+    <span>
+        <img src="{{ url_for('static', filename='images/timer.png') }}" style="margin-left: 1rem; height: 75%; width: auto;">
+        <span id="timerDisplay">
+            00.0
+        </span>
+    </span>
+    <button id="button_topbar_back" class="orange-button" style="z-index: 2; margin-right: 1rem; font-size: 1.5rem; width: 3rem; height: 3rem; padding: 0px;"onclick="
+    pause_game()">
+        <span id="pause_button_text">I I</span>
+    </button>
+</div>
+
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+
+<div id="game_elements">
+    <div class="card-group" id="card_id">
+        <div class="card-body">
+            <div class="card-header">
+                <div class="title-word" id="title-word-id">Kelime Kelimeoğlu</div>
+            </div>
+            <div class="forbidden-words" id="forbidden-words-id" style="margin-top: 2.5rem;">
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 1</button>
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 2</button>
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 3</button>
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 4</button>
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 5</button>
+                <button class="forbidden-button" onclick="printText(this)">Yasak Kelime 6</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="answer-buttons">
+        <button id="button_wrong" class="answer-button" style="background-color: #db3761;">Tabu</button>
+        <button id="button_skip" class="answer-button" style="background-color: #ffa719;"">Pas</button>
+        <button id="button_correct" class="answer-button">Bildi</button>
+    </div>
+</div>
+
+
+<div class="pause-overlay" id="pause_overlay_id" style="visibility: visible;"onclick="
+    resume_game()">
+    <button class="pause-menu-button" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <span class=" white-text" style="font-size: 2.5rem; width: 80%; margin: auto;">
+            Hazır olduğunuzda devam etmek için dokunun.
+        </span>
+    </button>
+    <button class="pause-menu-button"onclick="
+    window.location.href='{{ url_for('game_settings') }}'">
+        <span class=" white-text" style="font-size: 2.5rem; width: 80%; margin: auto;">
+            Menüye dön.
+        </span>
+    </button>
+
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            start_game();
+
+            var skip_count = JSON.parse(sessionStorage.getItem('settings'))[4]
+            var taboo_count = JSON.parse(sessionStorage.getItem('settings'))[5]
+
+            const button_wrong = document.getElementById('button_wrong');
+            const button_skip = document.getElementById('button_skip');
+            const button_correct = document.getElementById('button_correct');
+
+            if(skip_count > -1){
+                button_skip.innerText = "Pas ("+skip_count+")"; 
+            }
+            if(taboo_count > -1){
+                button_wrong.innerText = "Tabu ("+taboo_count+")";
+            }
+            
+            button_wrong.addEventListener('click', function() {
+                // Tabu
+                incrementStat("wrong")
+                taboo_count -= 1;
+                if(taboo_count == 0){
+                    // Tabu yapma hakkı kalmadı
+                    button_wrong.innerText = "Tabu (0)";
+                    button_wrong.disabled = true;
+                }
+                if(taboo_count >= 0) button_wrong.innerText = "Tabu ("+taboo_count+")";
+                set_card_texts();
+            });
+
+            button_skip.addEventListener('click', function() {
+                // Pas
+                incrementStat("skipped")
+                skip_count -= 1;
+                if(skip_count == 0){
+                    button_skip.innerText = "Pas (0)";
+                    button_skip.disabled = true;
+                }
+                if(skip_count >= 0) button_skip.innerText = "Pas ("+skip_count+")"; 
+                set_card_texts();
+            });
+
+            button_correct.addEventListener('click', function() {
+                // Bildi
+                incrementStat("correct")
+                set_card_texts();
+            });
+        })
+    function printText(button) {
+        var text = button.textContent.trim();
+        console.log(text);
+    }
+
+    // url_for kullandığı için html içinde bulunmalı.
+    function start_game() {
+        incrementStat("playedgames")
+        seen_words = []
+        pause_game();
+        start_round();
+    }
+
+    function start_round(){
+        var selectedTime = JSON.parse(sessionStorage.getItem('settings'))[3] // JSON'dan okuyacak.
+        timerRemainingTime = selectedTime * 1000; // Seçilen süreyi milisaniyeye çevir
+        var category = JSON.parse(sessionStorage.getItem('settings'))[1];
+        var url = "{{url_for('static',filename='data/')}}wordlist/"+ category +".json";
+        set_card_texts(url, -1);
+        updateTimer()
+    }
+
+    function incrementStat(statType) {
+        fetch('/api/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token() }}'  // Include this line if CSRF protection is enabled
+            },
+            body: JSON.stringify({
+                'stat_type': statType,
+                'increment': 1  // You can customize the increment value here
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // if (data.status === 'success') {
+            //     document.getElementById(statType).innerText = data[statType];
+            // } else {
+            //     alert('Error incrementing ' + statType);
+            // }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row-container" style="margin-top: -40%; justify-content: end;">
+        {% if current_user.is_authenticated %}
+            <!-- <h1>Hi, {{ current_user.username }}!</h1> -->
+            <button id="button_login" class="orange-button"style="padding: 10px; font-size:1.1rem" onclick="window.location.href=`{{ url_for('edit_profile') }}`">
+                Profili Düzenle
+            </button>
+            <button id="button_login" class="orange-button"style="padding: 10px; font-size:1.1rem" onclick="window.location.href=`{{ url_for('logout') }}`">
+                Çıkış Yap
+            </button>
+        {% else %}
+        <button id="button_login" class="orange-button"style="padding: 10px; font-size:1.1rem" onclick="window.location.href=`{{ url_for('login') }}`">
+            Giriş Yapın
+        </button>
+        {% endif %}
+
+    </div>
+
+    <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" style="scale: 75%;">
+    </div>
+    <button id="button_play" class="orange-button orange-shadow" style="margin-top: 30%; width: 150px; height: 150px; border-radius: 30px;" onclick="window.location.href=`{{ url_for('game_settings') }}`">
+         Oyna
+    </button>
+
+{% endblock %}

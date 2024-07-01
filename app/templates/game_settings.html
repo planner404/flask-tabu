@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="topbar-body white-text" style="color: rgb(34, 47, 84)">
+    <span style="position: absolute; width: inherit; text-align: center;">
+    Oyun Ayarları
+    </span>
+    <button id="button_topbar_back" class="orange-button" style="z-index: 2; margin-left: 1rem; font-size: 1.5rem; width: 3rem; height: 3rem; padding: 0px;"onclick="window.location.href='{{ url_for('index') }}'">
+        &lt;
+    </button>
+</div>
+
+
+<style>
+    select{
+        border-radius: 1rem;
+        min-width: 5rem;
+    }
+    .white-line {
+    width: 80%;
+    height: 0.4rem;
+    border-radius: 1rem;
+    border-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(222, 220, 243);
+    }
+    .checkbox-style {
+    width: 2.5rem;
+    height: 2.5rem;
+    }
+</style>
+
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Dil:
+        <select id="dm_lang">
+            <option value="tr" selected="">Türkçe</option>
+        </select>
+    </span>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Kategori:
+        <select id="dm_category">
+            <option value="tr_cards_jobs">Meslekler</option>
+            <option value="tr_cards_weirdjobs">Garip Meslekler</option>
+        </select>
+    </span>
+
+    <svg class="white-line"></svg>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Tur sayısı
+        <select id="dm_round">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected="">6</option>
+        </select>
+    </span>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Tur süresi
+        <select id="dm_time">
+            <option value="-1">Süresiz</option>
+            <option value="30">30s</option>
+            <option value="45">45s</option>
+            <option value="60" selected="">60s</option>
+            <option value="75">75s</option>
+            <option value="90">90s</option>
+            <option value="120">120s</option>
+        </select>
+    </span>
+
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Pas hakkı
+        <select id="dm_skip">
+            <option value="-1">Sınırsız</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected="">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </span>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Tabu hakkı
+        <select id="dm_taboos">
+            <option value="-1">Sınırsız</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected="">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </span>
+
+    <svg class="white-line"></svg>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Yasaklı kelime sayısı
+        <select id="dm_forbidden">
+            <option value="0">Serbest</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected="">6</option>
+        </select>
+    </span>
+
+    <span class="row-container white-text" style="justify-content: space-between;">
+        Siyah Kelime
+        <input type="checkbox" id="cb_blackword" class="checkbox-style">
+    </span>
+
+    <button id="button_settings_submit" class="orange-button"style="margin-top: 1rem; margin-right: 4rem; padding: 10px; font-size:1.5rem; align-self: self-end; padding-right: 2rem;padding-left: 2rem;"onclick="
+    save_settings();
+    window.location.href=`{{ url_for('game_gameplay') }}`;">
+        Başla
+    </button>
+</div>
+{% endblock %}

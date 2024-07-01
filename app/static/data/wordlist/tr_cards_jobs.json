@@ -1,0 +1,404 @@
+{
+  "c": [
+    {
+      "t": "Doktor",
+      "b": ["Hastane", "Hasta", "Sağlık", "Ameliyat", "Stetoskop", "Reçepsiyon"]
+    },
+    {
+      "t": "Mühendis",
+      "b": ["Proje", "Teknoloji", "İnşaat", "Plan", "Model", "Makine"]
+    },
+    {
+      "t": "Avukat",
+      "b": ["Mahkeme", "Hukuk", "Vekil", "Savunma", "Ceza", "Dava"]
+    },
+    {
+      "t": "Öğretmen",
+      "b": ["Okul", "Sınıf", "Ders", "Eğitim", "Ödev", "Öğrenci"]
+    },
+    {
+      "t": "Aşçı",
+      "b": ["Yemek", "Mutfak", "Tarif", "Şef", "Tat", "Pişirme"]
+    },
+    {
+      "t": "Polis",
+      "b": ["Suç", "Adalet", "Görev", "Araba", "Emniyet", "Mafya"]
+    },
+    {
+      "t": "Mimar",
+      "b": ["Mimari", "Tasarım", "Yapı", "İnşa", "Plan", "Çizim"]
+    },
+    {
+      "t": "Eczacı",
+      "b": ["İlaç", "Reçete", "Sağlık", "İstasyon", "Aşı", "Farmakoloji"]
+    },
+    {
+      "t": "Pilot",
+      "b": ["Uçak", "Havaalanı", "Rota", "Kokpit", "Havayolu", "Kabin"]
+    },
+    {
+      "t": "Gazeteci",
+      "b": ["Haber", "Medya", "Muhabir", "Basın", "Yayın", "Haberleşme"]
+    },
+    {
+      "t": "Müzisyen",
+      "b": ["Müzik", "Enstrüman", "Konser", "Şarkı", "Beste", "Orkestra"]
+    },
+    {
+      "t": "Yazar",
+      "b": ["Kitap", "Roman", "Yazı", "Hikaye", "Editör", "Yayıncı"]
+    },
+    {
+      "t": "Programcı",
+      "b": ["Kod", "Yazılım", "Bilgisayar", "Program", "Geliştirme", "Veritabanı"]
+    },
+    {
+      "t": "Tasarımcı",
+      "b": ["Tasarım", "Grafik", "Ürün", "Moda", "Sanat", "Kreatif"]
+    },
+    {
+      "t": "Psikolog",
+      "b": ["Zihin", "Terapi", "Ruh", "Duygu", "Psikoterapi", "Psikiyatri"]
+    },
+    {
+      "t": "Dentist",
+      "b": ["Diş", "Dişçi", "Ağız", "Protez", "Dişhekimi", "Çürük"]
+    },
+    {
+      "t": "Eğitmen",
+      "b": ["Eğitim", "Eğitici", "Eğitmenlik", "Eğitimci", "Öğretim", "Öğretmen"]
+    },
+    {
+      "t": "Fotoğrafçı",
+      "b": ["Fotoğraf", "Kamera", "Portre", "Dijital", "Görüntü", "Çekim"]
+    },
+    {
+      "t": "Hemşire",
+      "b": ["Hasta", "Sağlık", "Bakım", "Kan", "İğne", "Ameliyat"]
+    },
+    {
+      "t": "Yönetmen",
+      "b": ["Film", "Sinema", "Yönetim", "Prodüksiyon", "Senaryo", "Kamera"]
+    },
+    {
+      "t": "Veteriner",
+      "b": ["Hayvan", "Veterinerlik", "Köpek", "Kedi", "Muayene", "Ameliyat"]
+    },
+    {
+      "t": "Berber",
+      "b": ["Saç", "Kesim", "Tıraş", "Sakal", "Kuaför", "Makas"]
+    },
+    {
+      "t": "Modacı",
+      "b": ["Moda", "Tasarım", "Defile", "Koleksiyon", "Kumaş", "Stil"]
+    },
+    {
+      "t": "Grafiker",
+      "b": ["Grafik", "Tasarım", "İllüstrasyon", "Dijital", "Kreatif", "Logo"]
+    },
+    {
+      "t": "Yönetici",
+      "b": ["Yönetim", "Liderlik", "Ekip", "Organizasyon", "Planlama", "Koordinasyon"]
+    },
+    {
+      "t": "Satış Temsilcisi",
+      "b": ["Satış", "Pazarlama", "Müşteri", "Ürün", "Hizmet", "Fiyat"]
+    },
+    {
+      "t": "Terapist",
+      "b": ["Terapi", "Ruh", "Duygu", "Danışmanlık", "Tedavi", "Stres"]
+    },
+    {
+      "t": "Diş Teknikeri",
+      "b": ["Diş", "Protez", "Ağız", "Diş Laboratuvarı", "Porselen", "Kaplama"]
+    },
+    {
+      "t": "Güvenlik Görevlisi",
+      "b": ["Güvenlik", "Koruma", "Kamera", "Alarm", "Gardiyan", "Gözetim"]
+    },
+    {
+      "t": "Rehber",
+      "b": ["Tur", "Gezi", "Turist", "Müze", "Tarih", "Anıt"]
+    },
+    {
+      "t": "Dansçı",
+      "b": ["Dans", "Ritim", "Hareket", "Koreografi", "Müzik", "Gösteri"]
+    },
+    {
+      "t": "Elektrikçi",
+      "b": ["Elektrik", "Kablo", "Priz", "Aydınlatma", "Sigorta", "Panel"]
+    },
+    {
+      "t": "Hava Trafik Kontrolörü",
+      "b": ["Havaalanı", "Uçak", "Kontrol", "Trafi̇k", "Yönlendirme", "Radar"]
+    },
+    {
+      "t": "Kimyager",
+      "b": ["Kimya", "Analiz", "Laboratuvar", "Molekül", "Reaksiyon", "Madde"]
+    },
+    {
+      "t": "Arkeolog",
+      "b": ["Tarih", "Kazı", "Arkeoloji", "Antik", "Kalıntı", "Müze"]
+    },
+    {
+      "t": "Bankacı",
+      "b": ["Banka", "Müşteri", "Kredi", "Hesap", "Faiz", "Yatırım"]
+    },
+    {
+      "t": "Endüstriyel Tasarımcı",
+      "b": ["Tasarım", "Ürün", "Endüstri", "Makine", "Tasarımcı", "Üretim"]
+    },
+    {
+      "t": "Avcı",
+      "b": ["Av", "Avcılık", "Silah", "Doğa", "Hayvan", "Orman"]
+    },
+    {
+      "t": "Meteorolog",
+      "b": ["Hava", "Tahmin", "Meteoroloji", "Yağmur", "Rüzgar", "Sıcaklık"]
+    },
+    {
+      "t": "Tercüman",
+      "b": ["Çeviri", "Dil", "Tercüme", "Konuşma", "Metin", "Çevirmen"]
+    },
+    {
+      "t": "Jandarma",
+      "b": ["Güvenlik", "Asker", "Ordu", "Karargah", "Polis", "Sivil"]
+    },
+    {
+      "t": "Odyolog",
+      "b": ["Odyoloji", "İşitme", "Kulak", "Ses", "Dinleme", "Konuşma"]
+    },
+    {
+      "t": "Çevre Mühendisi",
+      "b": ["Çevre", "Mühendislik", "Atık", "Doğa", "Kirlilik", "Su"]
+    },
+    {
+      "t": "Fizyoterapist",
+      "b": ["Fizyoterapi", "Hareket", "Kas", "Rehabilitasyon", "Masaj", "Tedavi"]
+    },
+    {
+      "t": "Jeolog",
+      "b": ["Toprak", "Kaya", "Jeoloji", "Yeraltı", "Volkan", "Tabaka"]
+    },
+    {
+      "t": "Terzi",
+      "b": ["Dikiş", "Kumaş", "Giysi", "Kıyafet", "Moda", "Kalıp"]
+    },
+    {
+      "t": "Emlakçı",
+      "b": ["Ev", "Gayrimenkul", "Kiralık", "Satılık", "Konut", "Arsa"]
+    },
+    {
+      "t": "Matematikçi",
+      "b": ["Matematik", "Sayı", "Formül", "Denklem", "Aritmetik", "Cebir"]
+    },
+    {
+      "t": "Tarım Danışmanı",
+      "b": ["Tarım", "Danışmanlık", "Toprak", "Bitki", "Hasat", "Gübre"]
+    },
+    {
+      "t": "Aktör",
+      "b": ["Oyunculuk", "Sahne", "Rol", "Tiyatro", "Film", "Dizi"]
+    },
+    {
+      "t": "Fotomodel",
+      "b": ["Modellik", "Podyum", "Fotoğrafçı", "Manken", "Gösteri", "Defile"]
+    },
+    {
+      "t": "Yüzücü",
+      "b": ["Yüzme", "Yüzücülük", "Havuz", "Yarış", "Su", "Kulüp"]
+    },
+    {
+      "t": "Gümrük Memuru",
+      "b": ["Gümrük", "Eşya", "Pasaport", "İthalat", "İhracat", "Kontrol"]
+    },
+    {
+      "t": "Manken",
+      "b": ["Modellik", "Podyum", "Fotoğrafçı", "Fotomodel", "Gösteri", "Defile"]
+    },
+    {
+      "t": "Ses Mühendisi",
+      "b": ["Ses", "Müzik", "Mikrofon", "Stüdyo", "Kayıt", "Prodüksiyon"]
+    },
+    {
+      "t": "Yönetim Danışmanı",
+      "b": ["Danışmanlık", "Strateji", "Yönetim", "Kurumsal", "Koçluk", "Liderlik"]
+    },
+    {
+      "t": "Kuaför",
+      "b": ["Saç", "Makyaj", "Güzellik", "Kesim", "Boya", "Stil"]
+    },
+    {
+      "t": "Sosyolog",
+      "b": ["Toplum", "Sosyoloji", "Sosyal", "Davranış", "Araştırma", "Anket"]
+    },
+    {
+      "t": "Kütüphaneci",
+      "b": ["Kitap", "Kütüphane", "Okuma", "Araştırma", "Veri", "Katalog"]
+    },
+    {
+      "t": "Aşçı Yardımcısı",
+      "b": ["Yemek", "Mutfak", "Aşçı", "Pişirme", "Sıcak", "Soğuk"]
+    },
+    {
+      "t": "Ambulans Şoförü",
+      "b": ["Ambulans", "Hastane", "Acil", "Sedyeli", "Yaralı", "Hızlı"]
+    },
+    {
+      "t": "Kurye",
+      "b": ["Kargo", "Paket", "Dağıtım", "Kurye", "Teslim", "Adres"]
+    },
+    {
+      "t": "Barmen",
+      "b": ["Bar", "Kokteyl", "İçki", "Bira", "Alkol", "Müşteri"]
+    },
+    {
+      "t": "Futbolcu",
+      "b": ["Futbol", "Maç", "Kale", "Top", "Kart", "Saha"]
+    },
+    {
+      "t": "Basketbolcu",
+      "b": ["Basketbol", "Pota", "Top", "Pas", "Oyun", "Saha"]
+    },
+    {
+      "t": "Hakem",
+      "b": ["Maç", "Kural", "Oyun", "Takım", "Futbol", "Basketbol"]
+    },
+    {
+      "t": "Hesap Uzmanı",
+      "b": ["Muhasebe", "Vergi", "Fatura", "Müşteri", "Hesap", "Beyanname"]
+    },
+    {
+      "t": "Otomotiv Mühendisi",
+      "b": ["Otomotiv", "Araç", "Motor", "Makine", "Tasarım", "Tersane"]
+    },
+    {
+      "t": "Dekoratör",
+      "b": ["Dekorasyon", "Ev", "Mobilya", "Tasarım", "İç Mimar", "Düzenleme"]
+    },
+    {
+      "t": "Kimya Mühendisi",
+      "b": ["Kimya", "Reaksiyon", "Madde", "Molekül", "Laboratuvar", "Çözümleme"]
+    },
+    {
+      "t": "Tesisatçı",
+      "b": ["Tesisat", "Su", "Kanalizasyon", "Boru", "Sıhhi", "Isıtma"]
+    },
+    {
+      "t": "Seyahat Acentası Çalışanı",
+      "b": ["Tur", "Seyahat", "Acente", "Rezervasyon", "Uçak", "Otel"]
+    },
+    {
+      "t": "Kondüktör",
+      "b": ["Tren", "Vagon", "Yolcu", "Bilet", "Anons", "İstasyon"]
+    },
+    {
+      "t": "Taksi Şoförü",
+      "b": ["Taksi", "Şoför", "Müşteri", "Ulaşım", "Trafik", "Hızlı"]
+    },
+    {
+      "t": "Turizm Rehberi",
+      "b": ["Turizm", "Gezi", "Rehberlik", "Turist", "Tarih", "Anıt"]
+    },
+    {
+      "t": "Radyolog",
+      "b": ["Radyoloji", "Tarama", "Röntgen", "Görüntüleme", "Filim", "Ultrason"]
+    },
+    {
+      "t": "Diş Hekimi",
+      "b": ["Diş", "Dişçi", "Ağız", "Protez", "Çürük", "Kanal Tedavisi"]
+    },
+    {
+      "t": "Optik Uzmanı",
+      "b": ["Gözlük", "Lens", "Optik", "Görme", "Muayene", "Göz"]
+    },
+    {
+      "t": "Ergoterapist",
+      "b": ["Ergoterapi", "Rehabilitasyon", "Hasta", "Kas", "Terapi", "Fiziksel"]
+    },
+    {
+      "t": "Sivil Savunma Uzmanı",
+      "b": ["Sivil Savunma", "Acil Durum", "Felaket", "Tahliye", "Barınma", "Eğitim"]
+    },
+    {
+      "t": "Harita Mühendisi",
+      "b": ["Harita", "Topografya", "Ölçüm", "Coğrafya", "Plan", "Yol"]
+    },
+    {
+      "t": "Balıkçı",
+      "b": ["Balık", "Deniz", "Ağ", "Tekne", "Av", "Su"]
+    },
+    {
+      "t": "Hukuk Danışmanı",
+      "b": ["Hukuk", "Danışmanlık", "Avukat", "Dava", "Mahkeme", "Kurallar"]
+    },
+    {
+      "t": "Kameraman",
+      "b": ["Kamera", "Çekim", "Film", "Video", "Yönetmen", "Sahne"]
+    },
+    {
+      "t": "Denizci",
+      "b": ["Deniz", "Gemi", "Kaptan", "Rıhtım", "Liman", "Yelken"]
+    },
+    {
+      "t": "İç Mimar",
+      "b": ["Mimari", "Tasarım", "Dekorasyon", "Ev", "Ofis", "Mobilya"]
+    },
+    {
+      "t": "Kurumsal Eğitim Uzmanı",
+      "b": ["Eğitim", "Eğitici", "Kurumsal", "Şirket", "Çalışan", "Gelişim"]
+    },
+    {
+      "t": "Turist Rehberi",
+      "b": ["Turizm", "Gezi", "Rehberlik", "Tarih", "Anıt", "Grup"]
+    },
+    {
+      "t": "Jeofizik Mühendisi",
+      "b": ["Jeofizik", "Toprak", "Deprem", "Zemin", "Araştırma", "Madde"]
+    },
+    {
+      "t": "Aşçı Kalfası",
+      "b": ["Yemek", "Mutfak", "Aşçı", "Pişirme", "Sıcak", "Soğuk"]
+    },
+    {
+      "t": "Hostes",
+      "b": ["Uçuş", "Yolcu", "Havayolu", "Kabin", "Havaalanı", "Uçak"]
+    },
+    {
+      "t": "İletişim Uzmanı",
+      "b": ["İletişim", "Medya", "Reklam", "Halkla İlişkiler", "Mesaj", "Kitle"]
+    },
+    {
+      "t": "Ambalaj Uzmanı",
+      "b": ["Ambalaj", "Paketleme", "Ürün", "Kutu", "Kağıt", "Plastik"]
+    },
+    {
+      "t": "Odyometrist",
+      "b": ["İşitme", "Odyometri", "Kulak", "Ses", "Test", "Rapor"]
+    },
+    {
+      "t": "Ziraat Mühendisi",
+      "b": ["Ziraat", "Tarım", "Bitki", "Toprak", "Makine", "Hasat"]
+    },
+    {
+      "t": "Diyetisyen",
+      "b": ["Diyet", "Beslenme", "Kilo", "Sağlık", "Diyabet", "Diyet Programı"]
+    },
+    {
+      "t": "Otel Yöneticisi",
+      "b": ["Otel", "Konaklama", "Müşteri", "Rezervasyon", "Servis", "Konuk"]
+    },
+    {
+      "t": "İnşaat Mühendisi",
+      "b": ["İnşaat", "Mühendislik", "Yapı", "Tasarım", "Proje", "İş Güvenliği"]
+    },
+    {
+      "t": "Ambulans Paramedik",
+      "b": ["Ambulans", "Paramedik", "Acil", "Sağlık", "Hasta", "Yaralı"]
+    },
+    {
+      "t": "Dalgıç",
+      "b": ["Deniz", "Dalış", "Ekipman", "Sualtı", "Solunum", "Keşif"]
+    }
+  ]
+}

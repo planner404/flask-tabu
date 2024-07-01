@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="topbar-body white-text" style="color: rgb(34, 47, 84)">
+        <span style="position: absolute; width: inherit; text-align: center;">
+        Profilim
+        </span>
+        <button id="button_topbar_back" class="orange-button" style="z-index: 2; margin-left: 1rem; font-size: 1.5rem; width: 3rem; height: 3rem; padding: 0px;"onclick="window.location.href='{{ url_for('index') }}'">
+            &lt;
+        </button>
+    </div>
+
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <!-- <h1>Profilim</h1> -->
+    <h1>Kullanıcı adınız: {{current_user.username}}</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            Kullanıcı adını düzenle:<br>
+            <!-- Ne yazılırsa kabul ediyor. Code injectiona müsait dikkat et (: -->
+            <span> 
+                {{ form.username(size=32) }}
+                {{ form.submit() }}
+            </span>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p></p>
+    </form>
+    <p class="white-text" style="font-size: 2rem; line-height: normal; margin-top: 2rem; margin-bottom: -0.5rem;">
+    İstatistiklerim
+    {% if stats %}
+    <ul style="font-size: 1.75rem;">
+        <li>Oynan oyunlar: {{ stats.playedgames }}</li>
+        <li>Bilinenler: {{ stats.correct }}</li>
+        <li>Tabular: {{ stats.wrong }}</li>
+        <li>Pas geçilenler: {{ stats.skipped }}</li>
+        <li>Siyah kelimeler: {{ stats.blackword }}</li>
+    </ul>
+    {% else %}
+    <p>İstatistik yok.</p>
+    {% endif %}
+    </p>
+    </div>
+{% endblock %}

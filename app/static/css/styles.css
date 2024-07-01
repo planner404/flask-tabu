@@ -1,0 +1,152 @@
+body {
+  background-color: #281b3f;
+  font-family: 'Calibri';
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center container horizontally */
+  align-items: center; /* Center container vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+img {
+  max-width: 100%; /* Ensure the image scales appropriately */
+  height: auto; /* Maintain aspect ratio */
+}
+
+p {
+  margin: 0;
+  font-family: 'Calibri';
+  font-size: 2rem;
+}
+
+input {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-style: none;
+}
+
+button:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  color: #ffffff;
+}
+
+a:link {
+  color: #ff7e5f;
+}
+
+/* visited link */
+a:visited {
+  color: #ff7e5f;
+}
+
+/* mouse over link */
+a:hover {
+  color: #f7a234;
+}
+
+/* selected link */
+a:active {
+  color: #da5533;
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 540px;
+  height: 960px;
+  background-color: #543884; /* Light blue background */
+  margin: auto; /* Center the container in the body */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow */
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+  justify-content: space-around; /* Space items evenly along the row */
+  width: 80%;
+  margin-top: 0.5rem; /* Space from the top */
+}
+
+.topbar-body {
+  height: 68px;
+  width: inherit;
+  border-style: none;
+  border-radius: 0px 0px 30px 30px;
+  background-color: rgb(222, 220, 243);
+  padding-top: 1rem;
+  
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  z-index: 10;
+
+}
+
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-wrapper {
+  width: 100%;
+  text-align: center; /* Center text */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.input-text {
+  /* position: absolute; */
+  border-radius: 158px;
+  transform-origin: 50% 50% 0px;
+  width: 432px;
+  left: 50%;
+  top: 50%;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border-style: none;
+  font-size: 1.2rem;
+}
+.orange-button {
+  padding: 20px;
+  border-style: none;
+  border-radius: 30px;
+
+  background-color: rgb(255, 150, 94);
+  visibility: visible;
+
+  font-family: 'Calibri';
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.orange-shadow{
+  filter: drop-shadow(rgb(255, 110, 94) 8px 8px 0px);
+}
+
+.white-text {
+  /* position: absolute; */
+  color: rgb(255, 255, 255);
+  font-family: Calibri;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 50px;
+  text-decoration: none solid rgb(255, 255, 255);
+}
+

@@ -1,0 +1,21 @@
+
+Table users {
+  id integer [primary key]
+  name varchar
+  email varchar
+  password_hash varchar
+  created_at timestamp
+}
+
+Table stats {
+  id integer [primary key]
+  user_id integer
+  playedgames integer
+  correct integer
+  wrong integer
+  skipped integer
+  blackword integer
+}
+
+
+Ref: users.id - stats.user_id
